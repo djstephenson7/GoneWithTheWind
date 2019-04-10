@@ -10,5 +10,9 @@ class Library {
   def search_author(name: String, books: List[Book]): Option[Book] = {
     books.find(a => a.author == name)
   }
+
+  def search_isbn(name: String, books: List[Book]): Option[Book] = {
+    books.find(a => a.ISBN == name)
+  }
 }
 
