@@ -16,6 +16,7 @@ class Library {
   }
 
   def loan(name: String, books: List[Book]): Book = {
+//    var loanList = new List
     books.find(a => a.title == name).getOrElse(Book("Title","Author","ISBN", false))
       .copy(onLoan = true)
   }
