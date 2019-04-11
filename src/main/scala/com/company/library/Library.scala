@@ -14,5 +14,10 @@ class Library {
   def search_isbn(name: String, books: List[Book]): Option[Book] = {
     books.find(a => a.ISBN == name)
   }
+
+  def loan(name: String, books: List[Book]): Book = {
+    books.find(a => a.title == name).getOrElse(Book("Title","Author","ISBN", false))
+      .copy(onLoan = true)
+  }
 }
 
