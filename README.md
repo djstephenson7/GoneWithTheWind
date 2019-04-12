@@ -22,7 +22,7 @@ In these scenarios, it really helped to discuss the problems and my thought proc
 
 #### Plans for implementing the remaining User Stories
 
-I ran out  of time and hit a mental block. I know how I would solve the remaining challenges, it's just a matter of bending Scala to my will. Therefore, I thought it would be helpful if I included the steps I would take when implementing the remaining functions:
+I ran out  of time and hit a mental block. I know how I would solve the remaining challenges, it's just a matter of bending Scala to my will. Therefore, I included the steps I would take when implementing the remaining functions:
 
 ##### Lending books to visitors
 
@@ -39,6 +39,13 @@ I can see no way of changing a few of the books to reflect their reference statu
 <img width="486" alt="Screenshot 2019-04-12 at 11 08 52" src="https://user-images.githubusercontent.com/41509062/56030259-4df2d600-5d14-11e9-8b1e-666079f127c7.png">
 
 <img width="686" alt="Screenshot 2019-04-12 at 11 08 14" src="https://user-images.githubusercontent.com/41509062/56030332-7c70b100-5d14-11e9-98fe-0f049b769c02.png">
+
+##### Checking if a book is on loan
+
+For this to work, the loanList val would have to removed from the loan method and placed in the Books.scala file. I would then implement a function that takes the book name as an argument and checks the loanList for the book and returns a Boolean:
+
+<img width="424" alt="Screenshot 2019-04-12 at 11 30 01" src="https://user-images.githubusercontent.com/41509062/56031070-59470100-5d16-11e9-8326-817fe523435d.png">
+
 
 ##### Getting started
 
