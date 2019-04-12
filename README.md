@@ -4,6 +4,36 @@
 
 You have a library of books and are offering them to the world - you are lending so many books now that it is becoming hard to keep track of what you have.  You decided to use your programming fu to build an application which can keep track of them for you.
 
+#### Approach
+
+* Read up on some of the principles of functional programming.
+* Sought help and advice from the Makers online community and contacted other Makers to discuss our thought processes and answer each other's questions about Scala.
+* Followed best Scala practices, such as keeping data as immutable as possible. For example, in the Book List, instead of adding the 'false' value to the end of every Book object in the list, I added a default value of false to the case class, as shown below:
+
+Screenshot of case class Book with onLoan: Boolean = false
+
+#### Challenges
+
+* Getting stuck on getting Scala to do... anything! I tried to take the baby-est(?) of baby steps when writing functions, becoming increasingly basic in what I want them to achieve, eventually trying only to extract and display the book titles - Error! I try to interact with my code in the JVM to see how it's working - Error! I try to use a solution from StackOverflow - Error!
+
+![Alt Text](https://giphy.com/gifs/bachelorette-kaitlyn-s11-e7-l41m4JSpEcCX6jlUQ/giphy.gif)
+
+In these scenarios, it really helped to discuss the problems and my thought process with other Makers, both my own personal contacts and reaching out to the Makers Alumni community on Slack! Stay awesome, guys!
+
+#### Plans for implementing the remaining User Stories
+
+I ran out  of time and hit a mental block. I know how I would solve the remaining challenges, it's just a matter of bending Scala to my will. Therefore, I thought it would be helpful if I included the steps I would take when implementing the remaining functions:
+
+##### Lending books to visitors
+
+This function is almost completed. The plan was to push an instance of the new, loaned book to a Loaned List, but I was unable to implement it without failing the tests:
+
+Screenshots of functions here
+
+##### Lending reference books
+
+I can see no way of changing a few of the books to reflect their reference status without changing the immutable List to a ListBuffer. Therefore, I'd have to change it to a mutable list and include a case in the loan function that prevents reference booked from being borrowed:
+
 ##### Getting started
 
 * clone the project
@@ -61,7 +91,7 @@ I need to know whether a book is available or on loan
 ```text
 As a librarian,
 So that I can update my stock levels,
-I need to be able update the library when a book is returned 
+I need to be able update the library when a book is returned
 ```
 
 ```text
@@ -88,5 +118,3 @@ So that I can manage my library correctly,
 I want to fine users who are late returning their books
 
 ```
-
-
